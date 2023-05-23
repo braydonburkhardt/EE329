@@ -1,0 +1,5 @@
+../Core/Src/lcd.c:3:6:LCD_init	8	static
+../Core/Src/lcd.c:34:6:LCD_pulse	8	static
+../Core/Src/lcd.c:41:6:LCD_command	16	static
+../Core/Src/lcd.c:52:6:LCD_write	16	static
+../Core/Src/lcd.c:63:6:LCD_write_string	24	static

@@ -1,0 +1,2 @@
+../Core/Src/waveform.c:9:6:waveform_init	8	static,ignoring_inline_asm
+../Core/Src/waveform.c:23:6:TIM2_IRQHandler	4	static

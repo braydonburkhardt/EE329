@@ -1,0 +1,4 @@
+../Core/Src/Keypad.c:4:6:keypad_init	4	static
+../Core/Src/Keypad.c:20:14:keypad_rowDetect	4	static
+../Core/Src/Keypad.c:34:14:keypad_colDetect	4	static
+../Core/Src/Keypad.c:48:5:keypad_getPressedKey	24	static
