@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdio.h> //temp, change to not use stdio
 
 #include "ADC.h"
 #include "uart.h"
@@ -12,23 +12,24 @@ int main(void)
   SystemClock_Config(); //configure the system clock
 
   LPUART_init();
-  LPUART_print("sys init");
 
-  ADC_init();
+  ADC_init(); //on PA0
 
   extern int ADC_lastVal;
   extern int ADC_newValFlag;
 
-  LPUART_print("starting");
-
   while (1)
   {
 	  if(ADC_newValFlag){
-		  ADC_newValFlag=0;//clear flag
+		  ADC_newValFlag = 0;//clear flag
 
 		  char voltageStr[16];
-		  sprintf(voltageStr, "%d", ADC_lastVal);
+		  sprintf(voltageStr, "%d", ADC_lastVal); //temp, change to not use stdio
+		  LPUART_clearScreen();
+		  LPUART_resetCursor();
 		  LPUART_print(voltageStr);
+
+		  ADC_triggerNewVal(); //start next sample
 	  }
   }
 }

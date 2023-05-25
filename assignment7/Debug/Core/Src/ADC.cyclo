@@ -1,2 +1,3 @@
 ADC.c:6:6:ADC_init	3
+ADC.c:43:6:ADC_triggerNewVal	1
 ADC.c:47:6:ADC1_2_IRQHandler	2

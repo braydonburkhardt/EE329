@@ -60,8 +60,8 @@ all: main-build
 main-build: assignment7.elf secondary-outputs
 
 # Tool invocations
-assignment7.elf assignment7.map: $(OBJS) $(USER_OBJS) C:\Users\brayd\Documents\stm32_workspace\assignment7\STM32L4A6ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "assignment7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\brayd\Documents\stm32_workspace\assignment7\STM32L4A6ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="assignment7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+assignment7.elf assignment7.map: $(OBJS) $(USER_OBJS) D:\Cal\ Poly\EE329\workspace_1.12.0\assignment7\STM32L4A6ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "assignment7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Cal Poly\EE329\workspace_1.12.0\assignment7\STM32L4A6ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="assignment7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
